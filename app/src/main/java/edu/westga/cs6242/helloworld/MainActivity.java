@@ -18,6 +18,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
 
+    int count = 0;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -42,14 +44,22 @@ public class MainActivity extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+
+
     }
 
-    public void buttonOnClick(View v) {
-        Button button = (Button) v;
-        button.setText("I've been clicked");
+    public void buttonPlusOnClick(View v) {
+        count = count + 1;
 
         TextView myTextView = (TextView) findViewById(R.id.textView);
-        myTextView.setText("You clicked my button!");
+        myTextView.setText(Integer.toString(count));
+    }
+
+    public void buttonMinusOnClick(View v) {
+        count = count - 1;
+
+        TextView myTextView = (TextView) findViewById(R.id.textView);
+        myTextView.setText(Integer.toString(count));
     }
 
     @Override
