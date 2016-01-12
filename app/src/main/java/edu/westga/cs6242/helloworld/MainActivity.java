@@ -55,13 +55,6 @@ public class MainActivity extends AppCompatActivity {
         myTextView.setText(Integer.toString(count));
     }
 
-    public void buttonMinusOnClick(View v) {
-        count = count - 1;
-
-        TextView myTextView = (TextView) findViewById(R.id.textView);
-        myTextView.setText(Integer.toString(count));
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
