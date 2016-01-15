@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="-"
         android:id="@+id/button2"
-        android:onClick="buttonPlusOnClick"
+        android:onClick="buttonMinusOnClick"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/button"
         android:layout_alignStart="@+id/button" />
